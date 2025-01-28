@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28th of january</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: arial, sans-serif;
+            background: #f8e8f300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .gradient-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #8e44ad, #f39c12);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 100% 0;
+            }
+            50% {
+                background-position: 0 100%;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        .content {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+        }
+
+        .letter-container {
+            position: relative;
+            padding: 40px;
+            background-color; linear-gradient(45deg, #e4ff6d, #8e44ad)
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 3px solid #f39c12;
+        }
+
+    
+
+        .letter-container h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .letter-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ffffff;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+            font-family: arial, sans-serif;
+        }
+
+        .letter-content::placeholder {
+            color: #ffffff;
+            font-style: italic;
+        }
+
+        .back-button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #f39c12;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-background"></div>
+    <div class="content">
+        <div class="letter-container">
+            <h1>well, this is still about you</h1>
+            <div class="letter-content" contenteditable="true"
+            <h1> i hope you find this. or maybe i don't. wherever you are, i hope you're okay, i hope you're happy.
+                where do i begin? there are still so, so many things i want to tell you. things i want you to know,
+                and also things i want to hear. i don't think you like me anymore. maybe you don't know how i feel about you.
+                for a while, i didn't either.
+
+                but mimi, lately i've been thinking about you all the time. you're in my dreams. i need to think of you to sleep
+                at night. i know things are messy, i know things are bad, everything sucks. im happy, but im not.
+                i don't like being your enemy, and i feel like an idiot because it appears i've made you mine.
+                for the record, i still fucking love you.
+                what the hell, sure.
+
+                i know this is a true long shot but i hope one day we will meet again. i hope i find you, and you don't hate me.
+                i hope the things we said can remain true.
+                i miss you so much.
+
+                am i still your bea?
+                if/when you find someone else, i hope you don't forget me. and hey, if that doesn't work out, i hope i still want
+                to see you again, and i hope you want to see me too.
+                i will write on this website because i cant talk to you. because i shouldn't.
+
+                i am not doing so well, but i did better today. i want to tell you about my day. i really have trouble
+                sleeping without you holding onto me.
+                im really sorry.
+            </h1></div>
+        </div>
+        <a href="index.html">
+            <button class="back-button">go back</button>
+        </a>
+    </div>
+
+    <!-- Audio player with your song -->
+    <audio autoplay loop>
+        <source src="your-audio-file.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const body = document.querySelector('body');
+        const gradient = document.querySelector('.gradient-background');
+
+        body.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            gradient.style.background = `radial-gradient(circle at ${mouseX}px ${mouseY}px, #8e44ad, #f39c12)`;
+        });
+    </script>
+</body>
+</html>
