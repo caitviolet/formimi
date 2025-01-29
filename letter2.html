@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29th of january</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: arial, sans-serif;
+            background: #f8e8f300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .gradient-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #8e44ad, #f39c12);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 100% 0;
+            }
+            50% {
+                background-position: 0 100%;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        .content {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+        }
+
+        .letter-container {
+            position: relative;
+            padding: 40px;
+            background-color; linear-gradient(45deg, #e4ff6d, #8e44ad)
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 3px solid #f39c12;
+        }
+
+    
+
+        .letter-container h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .letter-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ffffff;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+            font-family: arial, sans-serif;
+        }
+
+        .letter-content::placeholder {
+            color: #ffffff;
+            font-style: italic;
+        }
+
+        .back-button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #f39c12;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-background"></div>
+    <div class="content">
+        <div class="letter-container">
+            <h1>well, this is still about you</h1>
+            <div class="letter-content" contenteditable="true"
+            <h1> took me one day before i decided to write more. learning how to code, even if it is basic, was crazy from my uni
+                because it means i can do gay shit like this. 
+                i don't know how i feel about you today. some days i feel like we should go back to being strangers, and maybe today
+                is one of them. but tomorow i could miss you all over again.
+                i had the crazy idea to message you and ask if we could meet but i know we can't, i know we shouldn't. i lowkey
+                don't even want to. but a small part of me really does.
+                this isn't easy at all. it's actually only gotten harder.
+                we are coming up for the second month post breakup, and it's almost my birthday, and what would have been our
+                year anniversary, as well as valentines. its not going to be easy, and i don't want to think about it. 
+                febuary was going to be ours. now it's just mine, but i don't want it to be.
+                okay, so i think i've figured it out.
+                i know i can't go back, ive made my bed and ive got to lie in it, and i wouldn't want beamimi as it was, or as it
+                would be right now. i wish it was how it was. so if anything, we could just fall asleep by eachothers sides.
+                so i can get a good night sleep again. i can't, maybe one day it'll become easier.
+                maybe in a few years the universe would bring us together again. we're so young, so who's to say if we would even
+                want to be together again, but i still think of marrying you, which is batshit crazy.
+                i think about us living together. cooking food and playing games and living our sweet little life.
+                you took control of me at a point where i felt like i couldn't live, and yet i was still okay with that if it
+                meant i got your love. maybe once we're both better people. 
+                bea 
+            </h1></div>
+        </div>
+        <a href="index.html">
+            <button class="back-button">go back</button>
+        </a>
+    </div>
+
+    <!-- Audio player with your song -->
+    <audio autoplay loop>
+        <source src="your-audio-file.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const body = document.querySelector('body');
+        const gradient = document.querySelector('.gradient-background');
+
+        body.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            gradient.style.background = `radial-gradient(circle at ${mouseX}px ${mouseY}px, #8e44ad, #f39c12)`;
+        });
+    </script>
+</body>
+</html>
